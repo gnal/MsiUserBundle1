@@ -1,0 +1,15 @@
+entity:
+    User: User|Users
+    Group: Group|Groups
+
+security:
+    login:
+        forgot_password: Forgot password?
+
+Username: Username
+Password: Password
+Confirm Password: Confirm Password
+Summary: Summary
+Default: Default
+Language: Language
+Sign In: Sign In

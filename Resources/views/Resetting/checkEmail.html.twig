@@ -1,0 +1,8 @@
+{% extends "MsiCmfBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block content %}
+<p><a class="btn" href="{{ path('fos_user_security_login') }}">{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</a></p>
+<p>{{ 'resetting.check_email'|trans({'%email%': email}) }}</p>
+{% endblock content %}

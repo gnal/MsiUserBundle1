@@ -1,0 +1,15 @@
+entity:
+    Group: Groupe|Groupes
+    User: Utilisateur|Utilisateurs
+
+security:
+    login:
+        forgot_password: Mot de passe oublié?
+
+Username: Nom d'utilisateur
+Password: Mot de passe
+Confirm Password: Confirmer le mot de passe
+Summary: Sommaire
+Default: Par défaut
+Language: Langage
+Sign In: Connexion

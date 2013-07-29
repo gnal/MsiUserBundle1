@@ -1,0 +1,9 @@
+{% extends "MsiCmfBundle::layout.html.twig" %}
+
+{% block content %}
+{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+{% endblock content %}
+
+{% block title %}{{ 'Profile'|trans }}{% endblock title %}
+
+{% block sidebar %}{% include 'MsiUserBundle::sidebar.html.twig' %}{% endblock sidebar %}

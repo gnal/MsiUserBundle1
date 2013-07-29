@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#tab1" data-toggle="tab">{{ 'Main'|trans }}</a></li>
+    <li><a href="#advanced" data-toggle="tab">{{ 'Groups'|trans }}</a></li>
+    {% if app.user.isSuperAdmin %}<li><a href="#acl" data-toggle="tab">{{ 'ACL'|trans }}</a></li>{% endif %}
+</ul>

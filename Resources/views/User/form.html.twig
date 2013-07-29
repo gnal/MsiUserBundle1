@@ -1,0 +1,33 @@
+{% form_theme form 'MsiCmfBundle:Form:form.html.twig' %}
+
+<div class="tab-content">
+    <div class="tab-pane fade" id="advanced">
+        <fieldset>
+            <legend>{{ 'Groups'|trans }}</legend>
+            {{ form_row(form.groups) }}
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                {{ form_row(form.roles) }}
+            {% endif %}
+        </fieldset>
+    </div>
+    {% if app.user.isSuperAdmin %}
+    <div class="tab-pane fade" id="acl">
+        <fieldset>
+            <legend>{{ 'ACL'|trans }}</legend>
+            {{ form_row(form.operators) }}
+        </fieldset>
+    </div>
+    {% endif %}
+    <div class="tab-pane fade active in" id="tab1">
+        <fieldset>
+            <legend>{{ 'Main'|trans }}</legend>
+            {{ form_row(form.enabled) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.plainPassword) }}
+            {{ form_row(form.locked) }}
+            {{ form_row(form.locale) }}
+
+            {{ form_rest(form) }}
+        </fieldset>
+    </div>
+</div>

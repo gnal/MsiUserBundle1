@@ -1,0 +1,15 @@
+parameters:
+#    msi_user.example.class: Msi\UserBundle\Example
+
+services:
+    msi_user.registration.form.type:
+        class: Msi\UserBundle\Form\Type\RegistrationType
+        arguments: [ %fos_user.model.user.class% ]
+        tags:
+            - { name: form.type, alias: msi_user_registration }
+
+    msi_user.profile.form.type:
+        class: Msi\UserBundle\Form\Type\ProfileType
+        arguments: [ %fos_user.model.user.class% ]
+        tags:
+            - { name: form.type, alias: msi_user_profile }

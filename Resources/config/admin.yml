@@ -1,0 +1,26 @@
+services:
+    # User
+    msi_user_user_admin:
+        class: %msi_user.user_admin.class%
+        arguments: [ @msi_user.user_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+
+    msi_user.user_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ %fos_user.model.user.class% ]
+        parent: msi_cmf.manager
+
+    # Group
+    msi_user_group_admin:
+        class: Msi\UserBundle\Admin\GroupAdmin
+        arguments: [ @msi_user.group_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+
+    msi_user.group_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ %fos_user.model.group.class% ]
+        parent: msi_cmf.manager
