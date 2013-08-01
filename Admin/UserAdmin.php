@@ -16,7 +16,7 @@ class UserAdmin extends Admin
         $this->options = [
             'search_fields' => ['a.id', 'a.username', 'a.email'],
             'form_template' => 'MsiUserBundle:User:form.html.twig',
-            'sidebar_template' => 'MsiUserBundle:User:sidebar.html.twig',
+            // 'sidebar_template' => 'MsiUserBundle:User:sidebar.html.twig',
         ];
     }
 
