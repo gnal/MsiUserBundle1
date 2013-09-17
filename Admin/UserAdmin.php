@@ -27,7 +27,6 @@ class UserAdmin extends Admin
             ->add('locked', 'boolean', [
                 'icon_true' => 'icon-ban-circle',
                 'icon_false' => 'icon-ban-circle',
-                'btn_true' => 'label-danger',
             ])
             ->add('email')
             ->add('lastLogin', 'date')
