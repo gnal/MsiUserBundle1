@@ -44,16 +44,16 @@ class UserAdmin extends Admin
                 'first_options' => ['label' => 'Password'],
                 'second_options' => ['label' => 'Confirm Password'],
             ])
-            ->add('locale', 'choice', [
-                'empty_value' => 'Default',
-                'empty_data' => null,
-                'choices' => [
-                    'fr' => 'FR',
-                    'en' => 'EN',
-                ],
-                'label' => 'Language',
-                'required'    => false,
-            ])
+            // ->add('locale', 'choice', [
+            //     'empty_value' => 'Default',
+            //     'empty_data' => null,
+            //     'choices' => [
+            //         'fr' => 'FR',
+            //         'en' => 'EN',
+            //     ],
+            //     'label' => 'Language',
+            //     'required'    => false,
+            // ])
             ->add('locked', 'checkbox')
         ;
 
